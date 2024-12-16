@@ -97,6 +97,12 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
           </div>
           <div className="sm:hidden">
             <FaBars className="text-white text-xl" />
+            <div
+              className="flex items-center cursor-pointer"
+              onClick={() => UpdateColor(color === "white" ? "black" : "white")}
+            >
+              <MdDarkMode />
+            </div>
           </div>
         </div>
       </div>
