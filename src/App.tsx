@@ -9,6 +9,8 @@ import Experience from "./Components/Sections/Experience";
 import OpenSource from "./Components/Sections/OpenSource";
 import ContactMe from "./Components/Sections/ContactMe";
 
+import { FaHandPointUp } from "react-icons/fa";
+
 function App() {
   const [color, setColor] = useState(localStorage.getItem("Color") || "white");
 
@@ -33,6 +35,12 @@ function App() {
         <ContactMe />
       </div>
       {/* ///////// */}
+
+      <div className="fixed bottom-5 right-5">
+        <a href="#">
+          <FaHandPointUp className="text-5xl text-white bg-purple-500 p-2 rounded-full" />
+        </a>
+      </div>
     </>
   );
 }

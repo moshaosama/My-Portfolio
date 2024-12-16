@@ -99,9 +99,9 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
           </div>
         </div>
         {Active ? (
-          <div className="text-[#ffffff8c] sm:hidden flex flex-col gap-4 p-4">
+          <div className="text-[#ffffff8c] sm:hidden flex flex-col gap-7 p-4">
             <a
-              href="#Learn"
+              href="#whatIDo"
               className={`${
                 color == "white" ? "text-black" : "text-white"
               } text-xl`}
@@ -109,7 +109,7 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
               Skills
             </a>
             <a
-              href="#Question"
+              href="#Experience"
               className={`${
                 color == "white" ? "text-black" : "text-white"
               } text-xl`}
@@ -117,7 +117,7 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
               Work Experiences
             </a>
             <a
-              href="#About"
+              href="#OpenSources"
               className={`${
                 color == "white" ? "text-black" : "text-white"
               } text-xl`}
@@ -125,7 +125,7 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
               Open Source
             </a>
             <a
-              href="#About"
+              href="#Resume"
               className={`${
                 color == "white" ? "text-black" : "text-white"
               } text-xl`}
@@ -133,7 +133,7 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
               Resume
             </a>
             <a
-              href="#About"
+              href="#ContactMe"
               className={`${
                 color == "white" ? "text-black" : "text-white"
               } text-xl`}
