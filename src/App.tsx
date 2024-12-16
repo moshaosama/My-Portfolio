@@ -8,7 +8,6 @@ import Education from "./Components/Sections/Education";
 import Experience from "./Components/Sections/Experience";
 import OpenSource from "./Components/Sections/OpenSource";
 import ContactMe from "./Components/Sections/ContactMe";
-import Loading from "./Pages/Loading";
 
 function App() {
   const [color, setColor] = useState(localStorage.getItem("Color") || "white");
