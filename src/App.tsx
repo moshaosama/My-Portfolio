@@ -12,7 +12,7 @@ import ContactMe from "./Components/Sections/ContactMe";
 import { FaHandPointUp } from "react-icons/fa";
 
 function App() {
-  const [color, setColor] = useState(localStorage.getItem("Color") || "white");
+  const [color, setColor] = useState(localStorage.getItem("Color") || "black");
 
   const updateColor = (newColor: string) => {
     localStorage.setItem("Color", newColor);
