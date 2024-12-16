@@ -6,6 +6,9 @@ import WhatiDo from "./Components/Sections/WhatiDo";
 import Proficiency from "./Components/Sections/Proficiency";
 import Education from "./Components/Sections/Education";
 import Experience from "./Components/Sections/Experience";
+import OpenSource from "./Components/Sections/OpenSource";
+import ContactMe from "./Components/Sections/ContactMe";
+import Loading from "./Pages/Loading";
 
 function App() {
   const [color, setColor] = useState(localStorage.getItem("Color") || "white");
@@ -27,6 +30,8 @@ function App() {
         <Proficiency />
         <Education />
         <Experience />
+        <OpenSource />
+        <ContactMe />
       </div>
       {/* ///////// */}
     </>

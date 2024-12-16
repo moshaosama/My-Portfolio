@@ -27,7 +27,10 @@ const WhatiDo = () => {
   const Color = localStorage.getItem("Color");
   return (
     <>
-      <div className="mx-20 max-sm:mx-10 flex max-sm:flex-col-reverse  justify-between items-center">
+      <div
+        className="mx-20 max-sm:mx-10 flex max-sm:flex-col-reverse  justify-between items-center"
+        id="whatIDo"
+      >
         <div>
           <img
             src="4948783-removebg-preview.png"

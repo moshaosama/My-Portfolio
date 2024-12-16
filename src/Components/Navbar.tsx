@@ -1,12 +1,14 @@
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 import "../App.css";
 import { FaBars } from "react-icons/fa";
+import { useState } from "react";
 
 interface NavbarProps {
   color: string;
   UpdateColor: (newColor: string) => void;
 }
 const Navbar = ({ color, UpdateColor }: NavbarProps) => {
+  const [Active, setActive] = useState<boolean>(false);
   return (
     <>
       <div
@@ -14,9 +16,9 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
           color == "white"
             ? "bg-white shadow-xl"
             : "bg-[#171c28] shadow-lg shadow-black"
-        } py-6 sticky top-0`}
+        } py-6 sticky top-0 z-50`}
       >
-        <div className="mx-10 flex justify-between items-center">
+        <div className="mx-10 flex justify-between items-center ">
           <div>
             <h1
               className={`font-bold text-2xl ${
@@ -57,21 +59,14 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
               Work Experiences
             </a>
             <a
-              href="#"
+              href="#OpenSources"
               className={`${
                 color == "white" ? "hover:bg-[#ddd]" : "hover:bg-purple-700"
               }  w-fit p-3 rounded-lg transition-all duration-200`}
             >
               Open Source
             </a>
-            <a
-              href="#"
-              className={`${
-                color == "white" ? "hover:bg-[#ddd]" : "hover:bg-purple-700"
-              }  w-fit p-3 rounded-lg transition-all duration-200`}
-            >
-              Achievements
-            </a>
+
             <a
               href="#Resume"
               className={`${
@@ -81,7 +76,7 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
               Resume
             </a>
             <a
-              href="#"
+              href="#ContactMe"
               className={`${
                 color == "white" ? "hover:bg-[#ddd]" : "hover:bg-purple-700"
               }  w-fit p-3 rounded-lg transition-all duration-200`}
@@ -92,19 +87,69 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
               className="flex items-center cursor-pointer"
               onClick={() => UpdateColor(color === "white" ? "black" : "white")}
             >
-              <MdDarkMode />
+              {color === "white" ? <MdDarkMode /> : <MdLightMode />}
             </div>
           </div>
-          <div className="sm:hidden">
-            <FaBars className="text-white text-xl" />
-            <div
-              className="flex items-center cursor-pointer"
-              onClick={() => UpdateColor(color === "white" ? "black" : "white")}
-            >
-              <MdDarkMode />
-            </div>
+          <div className="sm:hidden" onClick={() => setActive(!Active)}>
+            <FaBars
+              className={`${
+                color == "white" ? "text-black" : "text-white"
+              } text-xl`}
+            />
           </div>
         </div>
+        {Active ? (
+          <div className="text-[#ffffff8c] sm:hidden flex flex-col gap-4 p-4">
+            <a
+              href="#Learn"
+              className={`${
+                color == "white" ? "text-black" : "text-white"
+              } text-xl`}
+            >
+              Skills
+            </a>
+            <a
+              href="#Question"
+              className={`${
+                color == "white" ? "text-black" : "text-white"
+              } text-xl`}
+            >
+              Work Experiences
+            </a>
+            <a
+              href="#About"
+              className={`${
+                color == "white" ? "text-black" : "text-white"
+              } text-xl`}
+            >
+              Open Source
+            </a>
+            <a
+              href="#About"
+              className={`${
+                color == "white" ? "text-black" : "text-white"
+              } text-xl`}
+            >
+              Resume
+            </a>
+            <a
+              href="#About"
+              className={`${
+                color == "white" ? "text-black" : "text-white"
+              } text-xl`}
+            >
+              Contact Me
+            </a>
+            <div
+              className={`${
+                color == "white" ? "text-black" : "text-white"
+              } text-xl`}
+              onClick={() => UpdateColor(color === "white" ? "black" : "white")}
+            >
+              {color === "white" ? <MdDarkMode /> : <MdLightMode />}
+            </div>
+          </div>
+        ) : null}
       </div>
     </>
   );

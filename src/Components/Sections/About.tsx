@@ -32,25 +32,28 @@ const About = () => {
             </p>
           </div>
           <div className="flex gap-5 max-sm:gap-2 max-sm:w-full max-sm:justify-center">
-            <a href="#">
+            <a href="https://github.com/moshaosama" target="_black">
               <FaGithub className="text-5xl bg-[#333] hover:bg-[#6d6c6c] p-2 text-white rounded-3xl transition-all duration-200" />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/thisfekry/" target="_black">
               <FaLinkedin className="text-5xl bg-blue-500 hover:bg-blue-900 p-2 text-white rounded-3xl transition-all duration-200" />
             </a>
-            <a href="#">
+            <a href="https://mohamedOSFekry@gmail.com" target="_black">
               <SiGmail className="text-5xl bg-red-600 hover:bg-red-400 p-2 text-white rounded-3xl transition-all duration-200" />
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/mohamedosamakin/" target="_black">
               <FaFacebook className="text-5xl bg-blue-900 hover:bg-blue-700 p-2 text-white rounded-3xl transition-all duration-200" />
             </a>
-            <a href="#">
+            <a href="https://medium.com/@mohamedosfekry" target="_black">
               <FaMedium className="text-5xl bg-black p-2 text-white rounded-3xl transition-all duration-200" />
             </a>
           </div>
           <div className="my-10 flex gap-16 max-sm:gap-3 max-sm:justify-center">
-            <Buttom Title="CONTACT ME" />
-            <Buttom Title="DOWNLOAD MY RESUME" />
+            <Buttom href="" Title="CONTACT ME" />
+            <Buttom
+              href="https://drive.google.com/file/d/1DHzu43OAsYz8G5KKW6YBK-HrJEFNAyfP/view?usp=drivesdk"
+              Title="DOWNLOAD MY RESUME"
+            />
           </div>
         </div>
         <div>
