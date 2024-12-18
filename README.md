@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# Hi there! 👋 I'm Mohamed Osama  
+Welcome to my GitHub profile! I'm a **Full Stack Developer** with expertise in **MERN** and **MEAN** stacks, and I enjoy building efficient and scalable web applications.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 About Me  
+- 🎓 **21 years old** and in my final year of **Computer Science** studies.  
+- 💻 Skilled in **React, Angular, Node.js, Express, MongoDB, and PostgreSQL**.  
+- 🌐 Proficient in **Redux, RxJS, Observables, and state management tools**.  
+- 🌱 Currently learning **UI/UX Design, TypeScript, and advanced database concepts**.  
+- 🌟 Passionate about **AI**, and integrating it into full-stack solutions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tools & Technologies  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Languages  
+- JavaScript (Advanced)  
+- HTML/CSS (Advanced)  
+- Java (Backend Development)  
 
-- Configure the top-level `parserOptions` property like this:
+### Frontend  
+- React (with Hooks, Router, and Performance Optimization)  
+- Angular (with NGRX and RxJS)  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Backend  
+- Node.js  
+- Express.js    
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Database  
+- MongoDB  
+- PostgreSQL  
+- SQL  
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🌟 Notable Projects  
+1. **Spotify Clone**  
+   - Built using **MERN stack**, including **MongoDB**, **Express**, **React**, and **Node.js**.  
+   - Integrated Spotify API for album and artist data retrieval.  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **E-commerce Website**  
+   - Full-stack project with **React**, **Node.js**, and **MongoDB**.  
+   - Implemented payment gateway integration and admin dashboard.  
+
+
+## 🌐 Connect with Me  
+- GitHub: [moshaosama](https://github.com/moshaosama)  
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/moshaosama)  
