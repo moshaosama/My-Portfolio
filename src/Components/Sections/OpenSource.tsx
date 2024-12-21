@@ -34,28 +34,29 @@ const OpenSource = () => {
               </div>
             </div>
           </a>
+          <a href="https://github.com/moshaosama/Creative-Blog" target="_black">
+            <div
+              id="OpenSources"
+              className={`${
+                Color === "white"
+                  ? "bg-white shadow-xl shadow-black"
+                  : "bg-gray-800 shadow-lg hover:bg-purple-500"
+              }rounded-xl  p-6 hover:-translate-y-2 transition-transform duration-300 cursor-pointer `}
+            >
+              <h3 className="text-xl font-semibold text-blue-400 mb-3">
+                Creative_Blog 🔥
+              </h3>
+              <p className="text-gray-400 mb-4">
+                Creative Blog Sigma is a modern and interactive blog built using
+                React.js...
+              </p>
+              <div className="flex justify-between text-sm text-gray-500">
+                <span>⚡ JavaScript</span>
 
-          <div
-            id="OpenSources"
-            className={`${
-              Color === "white"
-                ? "bg-white shadow-xl shadow-black"
-                : "bg-gray-800 shadow-lg hover:bg-purple-500"
-            }rounded-xl  p-6 hover:-translate-y-2 transition-transform duration-300 cursor-pointer `}
-          >
-            <h3 className="text-xl font-semibold text-blue-400 mb-3">
-              Creative_Blog 🔥
-            </h3>
-            <p className="text-gray-400 mb-4">
-              Creative Blog Sigma is a modern and interactive blog built using
-              React.js...
-            </p>
-            <div className="flex justify-between text-sm text-gray-500">
-              <span>⚡ JavaScript</span>
-
-              <span>📁 34.7 MB</span>
+                <span>📁 34.7 MB</span>
+              </div>
             </div>
-          </div>
+          </a>
 
           <a
             href="https://github.com/moshaosama/E-Commerce-Market"
@@ -81,27 +82,28 @@ const OpenSource = () => {
               </div>
             </div>
           </a>
+          <a href="https://github.com/moshaosama/Spotify_Clone" target="_black">
+            <div
+              className={`${
+                Color === "white"
+                  ? "bg-white shadow-xl shadow-black"
+                  : "bg-gray-800 shadow-lg hover:bg-purple-500"
+              }rounded-xl  p-6 hover:-translate-y-2 transition-transform duration-300 cursor-pointer `}
+            >
+              <h3 className="text-xl font-semibold text-blue-400 mb-3">
+                Spotify_Clone
+              </h3>
+              <p className="text-gray-400 mb-4">
+                Integration with Spotify OAuth for secure user login and account
+                management...
+              </p>
+              <div className="flex justify-between text-sm text-gray-500">
+                <span>⚡ TypeScript</span>
 
-          <div
-            className={`${
-              Color === "white"
-                ? "bg-white shadow-xl shadow-black"
-                : "bg-gray-800 shadow-lg hover:bg-purple-500"
-            }rounded-xl  p-6 hover:-translate-y-2 transition-transform duration-300 cursor-pointer `}
-          >
-            <h3 className="text-xl font-semibold text-blue-400 mb-3">
-              Spotify_Clone
-            </h3>
-            <p className="text-gray-400 mb-4">
-              Integration with Spotify OAuth for secure user login and account
-              management...
-            </p>
-            <div className="flex justify-between text-sm text-gray-500">
-              <span>⚡ TypeScript</span>
-
-              <span>📁 3.3 MB</span>
+                <span>📁 3.3 MB</span>
+              </div>
             </div>
-          </div>
+          </a>
 
           <a href="https://github.com/moshaosama/Weather_app" target="_black">
             <div
