@@ -41,7 +41,7 @@ const ExperienceCom = ({
           >
             <li>{Description}</li>
             <a href="#" className="text-blue-500">
-              Ream More...
+              Read More...
             </a>
           </ul>
         </div>
