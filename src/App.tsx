@@ -14,6 +14,16 @@ import { FaHandPointUp } from "react-icons/fa";
 function App() {
   const [color, setColor] = useState(localStorage.getItem("Color") || "black");
 
+  const [visible, setVisible] = useState(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 90) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  });
+
   const updateColor = (newColor: string) => {
     localStorage.setItem("Color", newColor);
     setColor(newColor);
@@ -37,11 +47,13 @@ function App() {
       </div>
       {/* ///////// */}
 
-      <div className="fixed bottom-5 right-5">
-        <a href="#">
-          <FaHandPointUp className="text-5xl text-white bg-purple-500 p-2 rounded-full" />
-        </a>
-      </div>
+      {visible ? (
+        <div className="fixed bottom-5 right-5">
+          <a href="#">
+            <FaHandPointUp className="text-5xl text-white bg-purple-500 p-2 rounded-full" />
+          </a>
+        </div>
+      ) : null}
     </>
   );
 }
