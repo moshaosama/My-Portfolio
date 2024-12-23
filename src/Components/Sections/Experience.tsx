@@ -1,7 +1,15 @@
+import { useState } from "react";
 import ExperienceCom from "../ExperienceCom";
 
 const Experience = () => {
   const Color = localStorage.getItem("Color");
+  const [Visible, setVisible] = useState(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 2100) {
+      setVisible(true);
+    }
+  });
   return (
     <>
       <div
@@ -11,7 +19,11 @@ const Experience = () => {
         } mx-20 max-sm:mx-0 py-20 max-sm:w-full max-sm:text-center`}
       >
         <h1 className=" text-5xl max-sm:text-3xl">Experiences</h1>
-        <div className="flex max-sm:flex-col max-sm:justify-center items-center gap-4">
+        <div
+          className={`flex max-sm:flex-col max-sm:justify-center items-center transition-all duration-300 ${
+            Visible ? "gap-4 opacity-100" : "sm:gap-52 opacity-0"
+          }`}
+        >
           <ExperienceCom
             Label="Azzrk"
             Src="azzrkplatform_logo-removebg-preview.png"

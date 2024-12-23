@@ -1,11 +1,16 @@
+import { useState } from "react";
+
 const Education = () => {
   const Color = localStorage.getItem("Color");
+  const [Visible, setVisible] = useState<boolean>(false);
   return (
     <>
       <div
         className={`${
           Color == "white" ? "text-black" : "text-white"
-        } mx-20 py-20 `}
+        } mx-20 py-20`}
+        onMouseEnter={() => setVisible(true)}
+        onMouseLeave={() => setVisible(false)}
       >
         <h1 className=" text-5xl">Education</h1>
         <div className="my-10 flex max-sm:flex-col items-center gap-5">
@@ -28,7 +33,11 @@ const Education = () => {
             </p>
           </div>
         </div>
-        <hr className="bg-[#ddd] -my-10 h-[0.3pc] w-[60%] max-sm:w-full hover:w-full hover:bg-purple-500 transition-all duration-500" />
+        <hr
+          className={`bg-[#ddd] ${
+            Visible ? "bg-purple-500 w-full" : "bg-[#ddd]"
+          } -my-10 h-[0.3pc] w-[60%] max-sm:w-full  transition-all duration-500`}
+        />
       </div>
     </>
   );

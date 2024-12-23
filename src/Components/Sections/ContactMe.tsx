@@ -1,16 +1,28 @@
+import { useState } from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 const ContactMe = () => {
   const Color = localStorage.getItem("Color");
 
+  const [Visible, setVisible] = useState(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 3400) {
+      setVisible(true);
+    }
+  });
   return (
     <>
       <div
-        className="flex justify-between items-center max-sm:text-center mx-20 py-10 max-sm:flex-col-reverse"
+        className="flex justify-between items-center max-sm:text-center mx-20 py-10 max-sm:flex-col-reverse "
         id="ContactMe"
       >
-        <div className={`${Color === "white" ? "text-black" : "text-white"}`}>
+        <div
+          className={`${Color === "white" ? "text-black" : "text-white"} ${
+            Visible ? "sm:mx-0 opacity-100" : "sm:-mx-60 opacity-0"
+          } transition-all duration-300`}
+        >
           <h1 className="text-5xl max-sm:hidden">Reach Out to me!</h1>
           <p className={`text-[#868e96] text-3xl max-sm:text-lg `}>
             Discuss a project or just want to say hi? My Inbox is open for all.
@@ -37,7 +49,11 @@ const ContactMe = () => {
           </div>
         </div>
 
-        <div className="max-sm:text-center ">
+        <div
+          className={`max-sm:text-center ${
+            Visible ? "sm:max-0 opacity-100" : " sm:-mx-20 opacity-0"
+          } transition-all duration-300`}
+        >
           <h1
             className={`text-5xl hidden max-sm:block max-sm:text-2xl font-bold ${
               Color == "white" ? "max-sm:text-black" : "max-sm:text-white"

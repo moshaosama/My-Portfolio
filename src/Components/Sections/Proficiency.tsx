@@ -1,12 +1,21 @@
+import { useState } from "react";
+
 const Proficiency = () => {
   const Color = localStorage.getItem("Color");
+  const [Visible, setVisible] = useState<boolean>(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 750) {
+      setVisible(true);
+    }
+  });
   return (
     <>
       <div className="flex justify-between items-center">
         <div
-          className={`${
-            Color === "white" ? "text-black" : "text-white"
-          } m-20 py-10 w-1/4 max-sm:w-full max-sm:m-0`}
+          className={`${Color === "white" ? "text-black" : "text-white"} ${
+            Visible ? "sm:m-20 opacity-100" : "sm:-mx-60 opacity-0"
+          }  py-10 w-1/4 max-sm:w-full max-sm:m-0 transition-all duration-300`}
         >
           <h1 className=" text-5xl max-sm:text-3xl max-sm:text-center">
             Proficiency
@@ -42,7 +51,11 @@ const Proficiency = () => {
             </div>
           </div>
         </div>
-        <div className="mx-20 max-sm:hidden">
+        <div
+          className={`${
+            Visible ? "sm:mx-20 opacity-100" : "sm:-mx-0 opacity-0"
+          } max-sm:hidden transition-all duration-300`}
+        >
           <img src="rb_2149350374.png" alt="" className="rounded-lg w-[45pc]" />
         </div>
       </div>

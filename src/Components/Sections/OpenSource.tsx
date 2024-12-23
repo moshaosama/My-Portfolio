@@ -1,7 +1,16 @@
+import { useState } from "react";
 import Buttom from "../Buttom";
 
 const OpenSource = () => {
   const Color = localStorage.getItem("Color");
+  const [Visible, setVisible] = useState(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 2900) {
+      setVisible(true);
+    }
+  });
+
   return (
     <>
       <section className="container mx-20 max-sm:mx-0  px-4 py-12">
@@ -13,7 +22,11 @@ const OpenSource = () => {
           Open Source Project
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+        <div
+          className={`grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 transition-all duration-300 ${
+            Visible ? "gap-16 opacity-100" : "gap-60 opacity-0"
+          }  my-10`}
+        >
           <a href="https://github.com/moshaosama/My-Portfolio" target="_black">
             <div
               className={`${

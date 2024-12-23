@@ -18,6 +18,7 @@ function App() {
     localStorage.setItem("Color", newColor);
     setColor(newColor);
   };
+
   return (
     <>
       <Navbar color={color} UpdateColor={updateColor} />

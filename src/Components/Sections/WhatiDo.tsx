@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FaAngular,
   FaBootstrap,
@@ -25,13 +26,24 @@ import {
 
 const WhatiDo = () => {
   const Color = localStorage.getItem("Color");
+  const [visible, setVisible] = useState<boolean>(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 400) {
+      setVisible(true);
+    }
+  });
   return (
     <>
       <div
         className="mx-20 max-sm:mx-10 flex max-sm:flex-col-reverse  justify-between items-center"
         id="whatIDo"
       >
-        <div>
+        <div
+          className={`${
+            visible ? "sm:mx-0 opacity-100" : "sm:-mx-60 opacity-0"
+          } transition-all  sm:duration-300 max-sm:duration-500`}
+        >
           <img
             src="4948783-removebg-preview.png"
             alt="About.png"
@@ -39,9 +51,9 @@ const WhatiDo = () => {
           />
         </div>
         <div
-          className={`${
-            Color == "white" ? "text-black" : "text-white"
-          } font-bold text-xl max-sm:text-2xl max-sm:w-full max-sm:justify-center flex flex-col  gap-2`}
+          className={`${Color == "white" ? "text-black" : "text-white"} ${
+            visible ? "mx-0 opacity-100" : "-mx-20 opacity-0"
+          } font-bold transition-all duration-300  text-xl max-sm:text-2xl max-sm:w-full max-sm:justify-center flex flex-col  gap-2`}
         >
           <h1 className="max-sm:w-full max-sm:justify-center max-sm:flex">
             What i Do

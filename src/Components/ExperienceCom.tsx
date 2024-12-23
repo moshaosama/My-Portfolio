@@ -21,7 +21,7 @@ const ExperienceCom = ({
       <div
         className={`my-6 max-h-[40pc] border-white border-solid border rounded-xl w-[35pc] max-sm:w-72  transition-all duration-300  ${
           Color == "white"
-            ? "hover:shadow-[#ddd] hover:shadow-xl border-black"
+            ? "shadow-[#ddd] shadow-xl border-white border-[1px] border-solid hover:scale-105"
             : "border-white "
         }`}
       >
