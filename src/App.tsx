@@ -10,6 +10,7 @@ import OpenSource from "./Components/Sections/OpenSource";
 import ContactMe from "./Components/Sections/ContactMe";
 
 import { FaHandPointUp } from "react-icons/fa";
+import ExperienceCard from "./Components/ExperienceCard";
 
 function App() {
   const [color, setColor] = useState(localStorage.getItem("Color") || "black");

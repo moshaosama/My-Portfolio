@@ -19,13 +19,13 @@ const ExperienceCom = ({
   return (
     <>
       <div
-        className={`my-6 max-h-[40pc] border-white border-solid border rounded-xl w-[35pc] max-sm:w-72  transition-all duration-300  ${
+        className={`my-6 max-h-[30rem] p-4 border-white border-solid border rounded-xl max-w-[45rem] max-sm:w-72  transition-all duration-300  ${
           Color == "white"
             ? "shadow-[#ddd] shadow-xl border-white border-[1px] border-solid hover:scale-105"
-            : "border-white "
+            : "border-white hover:scale-105"
         }`}
       >
-        <div className="bg-blue-500 flex justify-center p-14 rounded-xl">
+        <div className="bg-blue-500 flex justify-center  p-14 rounded-xl">
           <h1 className="text-xl font-bold">{Label}</h1>
         </div>
         <div className="-my-16 flex justify-center">

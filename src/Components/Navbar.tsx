@@ -19,23 +19,37 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
         } py-6 sticky top-0 z-50`}
       >
         <div className="mx-10 flex justify-between items-center ">
-          <div>
-            <h1
-              className={`font-bold text-2xl ${
-                color == "white" ? "text-black" : "text-white"
-              }`}
-            >
-              <span>&lt;</span>
-              <span
-                style={{
-                  fontFamily: "Pacifico cursive",
-                }}
+          <a href="#">
+            <div>
+              <h1
+                className={`font-bold text-2xl ${
+                  color === "white" ? "text-black" : "text-white"
+                }`}
               >
-                Mohamed Osama /
-              </span>
-              <span>&gt;</span>
-            </h1>
-          </div>
+                <span
+                  style={{
+                    fontFamily: "'Pacifico', cursive",
+                  }}
+                >
+                  &lt;
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Pacifico', cursive",
+                  }}
+                >
+                  Mohamed Osama /
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Pacifico', cursive",
+                  }}
+                >
+                  &gt;
+                </span>
+              </h1>
+            </div>
+          </a>
 
           <div
             className={`flex gap-6 text-2xl max-sm:hidden ${
