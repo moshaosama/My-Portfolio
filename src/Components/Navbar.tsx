@@ -52,8 +52,6 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
     },
   ];
 
-  const toggleTheme = () => UpdateColor(themeStyles.changeMode);
-
   const renderLinks = () =>
     linksNav.map((el, index) => (
       <LinksNavbar key={index} href={el.href} Title={el.Title} />
