@@ -3,12 +3,12 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import About from "./Components/Sections/About";
 import WhatiDo from "./Components/Sections/WhatiDo";
-import Proficiency from "./Components/Sections/Proficiency";
 import Education from "./Components/Sections/Education";
 import Experience from "./Components/Sections/Experience";
 import OpenSource from "./Components/Sections/OpenSource";
 import ContactMe from "./Components/Sections/ContactMe";
 import { FaHandPointUp } from "react-icons/fa";
+import ProficiencySection from "./Components/Sections/ProficiencySection";
 function App() {
   const [color, setColor] = useState(localStorage.getItem("Color") || "black");
 
@@ -37,7 +37,7 @@ function App() {
       >
         <About />
         <WhatiDo />
-        <Proficiency />
+        <ProficiencySection />
         <Education />
         <Experience />
         <OpenSource />
