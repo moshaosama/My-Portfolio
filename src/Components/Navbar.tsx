@@ -8,6 +8,7 @@ interface NavbarProps {
   color: string;
   UpdateColor: (newColor: string) => void;
 }
+
 const Navbar = ({ color, UpdateColor }: NavbarProps) => {
   const [Active, setActive] = useState<boolean>(false);
   const themeStyles = {

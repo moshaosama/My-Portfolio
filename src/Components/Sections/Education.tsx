@@ -3,12 +3,14 @@ import { useState } from "react";
 const Education = () => {
   const Color = localStorage.getItem("Color");
   const [Visible, setVisible] = useState<boolean>(false);
+  const themeStyle = {
+    container: `${Color == "white" ? "text-black" : "text-white"}`,
+    Visible: `${Visible ? "bg-purple-500 w-full" : "bg-[#ddd]"}`,
+  };
   return (
     <>
       <div
-        className={`${
-          Color == "white" ? "text-black" : "text-white"
-        } mx-20 py-20`}
+        className={`${themeStyle.container} mx-20 py-20`}
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
       >
@@ -34,9 +36,7 @@ const Education = () => {
           </div>
         </div>
         <hr
-          className={`bg-[#ddd] ${
-            Visible ? "bg-purple-500 w-full" : "bg-[#ddd]"
-          } -my-10 h-[0.3pc] w-[60%] max-sm:w-full  transition-all duration-500`}
+          className={`bg-[#ddd] ${themeStyle.Visible} -my-10 h-[0.3pc] w-[60%] max-sm:w-full  transition-all duration-500`}
         />
       </div>
     </>
