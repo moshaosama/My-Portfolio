@@ -46,11 +46,11 @@ function App() {
       {/* ///////// */}
 
       {visible ? (
-        <div className="fixed bottom-5 right-5">
-          <a href="#">
+        <a href="#">
+          <div className="fixed bottom-5 right-5">
             <FaHandPointUp className="text-5xl text-white bg-purple-500 p-2 rounded-full" />
-          </a>
-        </div>
+          </div>
+        </a>
       ) : null}
     </>
   );
