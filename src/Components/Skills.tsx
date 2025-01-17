@@ -8,7 +8,6 @@ import {
   FaHtml5,
   FaJava,
   FaJs,
-  FaNode,
   FaNodeJs,
   FaPython,
   FaReact,
