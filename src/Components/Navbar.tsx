@@ -96,7 +96,7 @@ const Navbar = ({ color, UpdateColor }: NavbarProps) => {
             {renderLinks()}
             <div
               className={`${themeStyles.trColor} text-xl`}
-              onClick={toggleTheme}
+              onClick={() => UpdateColor(color === "white" ? "black" : "white")}
             >
               {color === "white" ? <MdDarkMode /> : <MdLightMode />}
             </div>
