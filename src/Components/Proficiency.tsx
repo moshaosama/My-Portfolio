@@ -8,15 +8,15 @@ const Proficiency = ({ Visible }: ProficiencyProps) => {
   const ProficiencyLists = [
     {
       Title: "Front-End Developer",
-      width: "95%",
+      width: "w-[95%]",
     },
     {
       Title: "Back-End Developer",
-      width: "80%",
+      width: "w-[80%]",
     },
     {
       Title: "Programming",
-      width: "70%",
+      width: "w-[70%]",
     },
   ];
 
@@ -33,7 +33,7 @@ const Proficiency = ({ Visible }: ProficiencyProps) => {
           >
             <div
               className={`bg-purple-300 ${
-                Visible ? `w-[${el.width}]` : "w-[0%]"
+                Visible ? `${el.width}` : "w-[0%]"
               } h-5 rounded-xl transition-all duration-1000`}
             ></div>
           </div>
