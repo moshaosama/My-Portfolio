@@ -37,7 +37,7 @@ const About = () => {
             <Buttom href="" Title="CONTACT ME" />
             <Buttom
               href="https://drive.google.com/file/d/1oQ_hRghMoEz8TkA_Zo_dFHLadjurjqon/view?usp=drive_link"
-              Title="DOWNLOAD MY RESUME"
+              Title="MY RESUME"
             />
           </div>
         </div>
