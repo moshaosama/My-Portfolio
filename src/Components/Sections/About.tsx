@@ -36,7 +36,7 @@ const About = () => {
           <div className="my-10 flex gap-16 max-sm:gap-3 max-sm:justify-center">
             <Buttom href="" Title="CONTACT ME" />
             <Buttom
-              href="https://drive.google.com/file/d/1DHzu43OAsYz8G5KKW6YBK-HrJEFNAyfP/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1oQ_hRghMoEz8TkA_Zo_dFHLadjurjqon/view?usp=drive_link"
               Title="DOWNLOAD MY RESUME"
             />
           </div>

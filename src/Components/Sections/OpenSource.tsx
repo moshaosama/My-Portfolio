@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Buttom from "../Buttom";
 import Projects from "../Projects";
+import Marquee from "react-fast-marquee";
+import { skillLists } from "../../Lists/SkillList";
 
 const OpenSource = () => {
   const Color = localStorage.getItem("Color");
@@ -33,6 +35,13 @@ const OpenSource = () => {
         </div>
         <div className="flex justify-center">
           <Buttom Title="More Projects" href="https://github.com/moshaosama" />
+        </div>
+        <div className="mt-10">
+          <Marquee>
+            {skillLists.map((el) => {
+              return <h1 className="mx-4">{el.Element}</h1>;
+            })}
+          </Marquee>
         </div>
       </section>
     </>
